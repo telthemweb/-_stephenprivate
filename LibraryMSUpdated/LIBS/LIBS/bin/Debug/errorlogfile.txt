@@ -1,0 +1,3 @@
+Monday, November 26, 2018 1:22:59 ===>> The table 'books' is already opened exclusively by another user, or it is already open through the user interface and cannot be manipulated programmatically.
+Monday, November 26, 2018 3:08:42 ===>> The Microsoft Office Access database engine cannot find the input table or query 'borrowed'.  Make sure it exists and that its name is spelled correctly.
+Wednesday, 28 November, 2018 7:05:06 ===>> The table 'user' is already opened exclusively by another user, or it is already open through the user interface and cannot be manipulated programmatically.

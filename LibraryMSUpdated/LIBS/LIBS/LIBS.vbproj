@@ -1,0 +1,255 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0978BF5D-41AC-400D-BE11-1634876F50D1}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>LIBS.My.MyApplication</StartupObject>
+    <RootNamespace>LIBS</RootNamespace>
+    <AssemblyName>LIBS</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>LIBS.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>LIBS.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Books\BookList.Designer.vb">
+      <DependentUpon>BookList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Books\BookList.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Books\Book_Entry.Designer.vb">
+      <DependentUpon>Book_Entry.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Books\Book_Entry.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="libraries\dbConn.vb" />
+    <Compile Include="libraries\libsModule.vb" />
+    <Compile Include="libraries\PublicVariables.vb" />
+    <Compile Include="libraries\QueryModule.vb" />
+    <Compile Include="libraries\saveModule.vb" />
+    <Compile Include="libraries\tableRows.vb" />
+    <Compile Include="loans\IssueBook.Designer.vb">
+      <DependentUpon>IssueBook.vb</DependentUpon>
+    </Compile>
+    <Compile Include="loans\IssueBook.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="loans\issuedBooks.Designer.vb">
+      <DependentUpon>issuedBooks.vb</DependentUpon>
+    </Compile>
+    <Compile Include="loans\issuedBooks.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="loans\finelist.Designer.vb">
+      <DependentUpon>finelist.vb</DependentUpon>
+    </Compile>
+    <Compile Include="loans\finelist.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainPage.Designer.vb">
+      <DependentUpon>MainPage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MainPage.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="receipt\Receipt.Designer.vb">
+      <DependentUpon>Receipt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="receipt\Receipt.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="students\addStudent.Designer.vb">
+      <DependentUpon>addStudent.vb</DependentUpon>
+    </Compile>
+    <Compile Include="students\addStudent.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="students\studentList.Designer.vb">
+      <DependentUpon>studentList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="students\studentList.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="suppliers\supplierEntry.Designer.vb">
+      <DependentUpon>supplierEntry.vb</DependentUpon>
+    </Compile>
+    <Compile Include="suppliers\supplierEntry.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\TransactionList.Designer.vb">
+      <DependentUpon>TransactionList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\TransactionList.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Users\Login.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Users\Login.Designer.vb">
+      <DependentUpon>Login.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Users\UsersList.Designer.vb">
+      <DependentUpon>UsersList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Users\UsersList.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Users\User_Registration.Designer.vb">
+      <DependentUpon>User_Registration.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Users\User_Registration.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Books\BookList.resx">
+      <DependentUpon>BookList.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Books\Book_Entry.resx">
+      <DependentUpon>Book_Entry.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="loans\IssueBook.resx">
+      <DependentUpon>IssueBook.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="loans\issuedBooks.resx">
+      <DependentUpon>issuedBooks.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="loans\finelist.resx">
+      <DependentUpon>finelist.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainPage.resx">
+      <DependentUpon>MainPage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="receipt\Receipt.resx">
+      <DependentUpon>Receipt.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="students\addStudent.resx">
+      <DependentUpon>addStudent.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="students\studentList.resx">
+      <DependentUpon>studentList.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="suppliers\supplierEntry.resx">
+      <DependentUpon>supplierEntry.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\TransactionList.resx">
+      <DependentUpon>TransactionList.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Users\Login.resx">
+      <DependentUpon>Login.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Users\UsersList.resx">
+      <DependentUpon>UsersList.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Users\User_Registration.resx">
+      <DependentUpon>User_Registration.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
